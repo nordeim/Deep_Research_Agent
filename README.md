@@ -17,8 +17,13 @@ pip install pyrate_limiter
 pip install wikipedia
 pip install arxiv
 pip install google-search-results
+pip install wolframalpha
 
-python deep_research-v3.py
+WOLFRAM_ALPHA_APPID=your-wolfram-alpha-app-id
+SERP_API_KEY=your-serp-api-key
+ANTHROPIC_API_KEY=your-anthropic-api-key
+
+python deep_research-v4.py
 ```
 
 https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221uN1O1l237lD2SNrHrS5WA0fL8ipYVoTo%22%5D,%22action%22:%22open%22,%22userId%22:%22103961307342447084491%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing

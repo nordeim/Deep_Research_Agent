@@ -78,6 +78,11 @@ please carefully review your latest code changes to identify a fix for the follo
 
 ---
 ```
+think deeply and thoroughly explore with extensive web searches to suggest a fix for the following error:
+```
+
+---
+```
 Summarize the key points in the documents.
 format all the content of the documents as a nicely formatted markdown document.
 ```

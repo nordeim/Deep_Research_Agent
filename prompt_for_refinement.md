@@ -64,8 +64,6 @@ After the code is improved, you will then proceed to write the research paper.
 ---
 ```python
 # sample deep research tool with improved design
-# improved deep research tool with gradio web UI and research paper
-
 import os
 from dotenv import load_dotenv
 from typing import List, Dict, Any

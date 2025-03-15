@@ -286,4 +286,61 @@ def test_research_flow():
 
 This implementation addresses all core requirements and recommended improvements. The code has been tested with multiple query types and demonstrates stable performance across different research domains. The Gradio interface provides clear visualization of research results with proper source attribution and quality metrics.
 
+---
 https://chat.qwen.ai/s/6c87b3ba-29ee-4b7a-86b5-ca8f264675b2
+
+```
+Okay, so I need to help create an improved Deep Research Tool based on the provided code samples and the outlined steps. Let me start by understanding the existing code and the requirements.
+
+First, looking at the sample code, there's a DeepResearchTool class that uses various tools like web search, Wikipedia, Arxiv, and Google Scholar. The tool conducts research in steps, fact-checks, and saves the output. The Gradio UI is set up for interaction. The task is to enhance this tool by incorporating best practices from the outlined steps.
+
+The user wants improvements in several areas: more comprehensive toolset, better source tracking, enhanced quality metrics, improved error handling, and a better Gradio UI. Also, the research paper needs to be detailed.
+
+Starting with Step 1: Code Review. The existing code has a multi-step process but could improve in tracking sources with actual URLs instead of just tool names. The fact-checking uses web search and Wikipedia, which might not be sufficient. The quality evaluation is basic and needs more factors.
+
+Step 2: Research Best Practices. The tool should have a more structured research pipeline, iterative refinement, and user feedback. But maybe that's for future work. For now, focus on the current enhancements.
+
+Step 3: Architecture Design. The plan is to modify the ResearchStep and ResearchResponse models to include detailed sources. The tools need to return source information. For example, Arxiv and Google Scholar can provide metadata with URLs, while web search might require parsing links from the results.
+
+Iteration 1: Prompt Refinement and Source Tracking. The system prompt in the sample code already outlines steps, but needs to emphasize source tracking. Modify the tools to extract source URLs. For web search, DuckDuckGo's results might include links, so parse those. For Wikipedia, include the page URLs. Arxiv and Scholar can return DOIs or URLs.
+
+But the existing tools' functions (like DuckDuckGoSearchRun) return text. To get URLs, maybe need a different approach or post-process the results to extract links. For example, using regex to find URLs in the web search results. However, this might not be reliable. Alternatively, use a tool that returns structured results with URLs. If that's not possible, at least track the tool names as sources, but the goal is to get actual URLs.
+
+In the code, the ResearchStep has a 'sources' list. For each tool call, after getting the output, parse it to extract URLs. For example, in the web_search tool's response, look for URLs and add them as sources. Similarly, for Wikipedia, the tool's output might include the page URL.
+
+But how to modify the existing tools to return URLs? The tools like ArxivQueryRun and GoogleScholarQueryRun might already return metadata with URLs. For example, Arxiv results include entry IDs which can be converted to URLs. Similarly, Google Scholar results might have links. Need to check the output formats of these tools.
+
+In the sample code, the _fact_check function uses web_search and wikipedia. The web_search result is text, which might include URLs. So, parse that text to extract URLs using regex. For example, find all http/https links. Then, add those URLs to the sources.
+
+For the ResearchStep, each step's sources should include the URLs from the tools used. So, after each tool call, process the output to extract URLs and create Source objects (as per the enhanced model in sample implementation suggestion 2).
+
+Iteration 2: Improve Quality Evaluation. The existing _evaluate_quality function uses number of steps, sources, summary length, and presence of academic sources. The enhanced model in the second sample includes more metrics like source diversity, academic rigor, fact-check coverage, depth. So, need to calculate these.
+
+For example, source diversity could be the number of different source types (web, wiki, arxiv, scholar). Academic rigor could be the number of academic sources used. Fact-check coverage could be the percentage of steps that involved fact-checking. Depth could be based on the number of steps and the detail in each.
+
+Implementing these would require tracking which steps used fact-checking and how many sources were academic. The quality_metrics in the ResearchResponse can then aggregate these.
+
+Iteration 3: Gradio UI. The current UI outputs Markdown. To improve, perhaps format each step with collapsible sections, show sources as hyperlinks, display the quality metrics in a more visual way (like a progress bar or score breakdown). Also, allow users to download the research report as a PDF or text file.
+
+Now, implementing these changes in code. Let's look at the sample code. The ResearchStep model in the first sample has 'sources' as a list of strings, but the second sample suggests a Source model with more details. So, updating the models to use the Source class would be better.
+
+In the DeepResearchTool's _setup_tools, each tool's func returns text. To extract sources, after calling the tool, parse the output for URLs. For example, in the web_search tool's output, extract URLs using regex. For Arxiv, parse the entries to get the paper URLs.
+
+Modify the agent's prompt to require including source URLs in the ResearchStep's sources. The output parser needs to handle the new Source model.
+
+In the conduct_research method, after parsing the raw_response, process each step's sources to extract URLs and create Source objects. Update the _evaluate_quality function to use the new metrics.
+
+For error handling, add try-except blocks around tool calls and parsing steps, logging errors and returning user-friendly messages.
+
+Finally, the Gradio UI can be enhanced by formatting the output with markdown links for sources, using sections for each step, and maybe a summary of quality metrics.
+
+Testing each iteration is crucial. For example, after modifying the source tracking, test with a query and check if the sources include actual URLs. Similarly, test the quality evaluation with different research outputs to ensure metrics are calculated correctly.
+
+The research paper needs to document all these changes, explain the code structure, and evaluate the tool's performance. Including code snippets, flow diagrams, and comparison with previous versions would be helpful.
+
+Potential challenges: Parsing URLs from tool outputs might not be reliable if the tools return plain text without structured data. In such cases, the sources might be incomplete. Also, integrating the Source model into the existing code requires careful modification of the ResearchStep and ResearchResponse models, and ensuring the agent's output includes the necessary data.
+
+Another consideration is the performance impact of additional parsing and processing. Need to ensure the tool remains efficient, possibly by using threading for tool calls or optimizing the regex for URL extraction.
+
+In conclusion, the plan is to enhance the existing code by improving source tracking through URL extraction, refining the quality evaluation with more metrics, adding error handling, and improving the Gradio UI. Then, document all these in a comprehensive research paper.
+```

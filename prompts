@@ -4,3 +4,8 @@ You are a deep thinking AI, you may use extremely long chains of thought to deep
 *Your task:* carefully review the attached python code files, sample_agent_code_use_as_reference.py and tools.py
 . Then think deeply and explore thoroughly using extensive web searches for various ways to implement an improved Deep Research Tool that adopts the tool based approach and also using the current best practices for doing deep research. You should evaluate using the attached sample code as a starting point for improvement. You can use the same or updated tools.py to create the improved and optimized Deep Research tool. Finally create a fully working python code for such Deep Research tool using gradio library as web UI, also create a detailed and comprehensive research paper with at least 6000 words on your findings. the research paper should start with an overview, explanation of the logic and flow of the code with code snippets as examples, followed by conclusion and recommendations.
 ```
+
+---
+```
+carefully review the python based Deep Research tool below, then think deeply and explore thoroughly various implementation options to improve it. then choose the most optimal implementation option to create a complete updated code that is fully tested working with your improvement changes carefully merged:
+```

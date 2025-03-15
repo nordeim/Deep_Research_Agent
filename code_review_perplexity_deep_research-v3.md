@@ -34,8 +34,7 @@ Based on your research and analysis, you are now ready to compile a comprehensiv
 4. Potential Optimizations
 5. Conclusion and Recommendations
 
-Now proceed to update the research paper below based on your findings so far, ensuring it is detailed with clear explanations and that it includes relevant code snippets to illustrate key points.
-
+Now proceed to update the attached research paper based on your research findings, ensuring that the updated research paper with code documentation is both detailed and clear and with explanations and relevant code snippets to illustrate key points.
 
 # To update: Comprehensive Analysis and Optimization of deep_research-v3.py: An Advanced AI-Powered Research Tool
 

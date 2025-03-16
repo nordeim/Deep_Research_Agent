@@ -73,6 +73,11 @@ You are a deep thinking AI, you may use extremely long chains of thought to deep
 
 ---
 ```
+carefully review the python app, deep_research-v4.py, and think deeply and explore thoroughly various implementation options to add a "Settings" tab to the Gradio web UI to let user to select different LLM API providers before choosing the most optimal and least intrusive implementation option to update deep_research-v4.py and create a patch file ("diff -u deep_research-v4.py deep_research-v4-updated.py") to effect the change. double-check and validate that the updated code is complete and fully tested working and that the suggested fix has been merged without affecting other parts of the code. use line by line comparison of the two codes for your verification and validation/confirmation.
+```
+
+---
+```
 please carefully review your latest code changes to identify a fix for the following error. think deeply and explore implementation options before choosing the option one to merge the fixes while not affecting other parts of the code.
 ```
 

@@ -23,7 +23,7 @@ WOLFRAM_ALPHA_APPID=your-wolfram-alpha-app-id
 SERP_API_KEY=your-serp-api-key
 ANTHROPIC_API_KEY=your-anthropic-api-key
 
-python deep_research-v5.py
+python deep_research-v6.py
 ```
 ![image](https://github.com/user-attachments/assets/b498321c-1730-4e7b-99e6-4dc11f48c47d)
 

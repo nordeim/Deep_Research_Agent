@@ -6,7 +6,7 @@ pip install python-magic unstructured python-docx openpyxl
 pip install --no-cache-dir --force-reinstall sentence-transformers torch
 pip install --no-cache-dir --force-reinstall sentence-transformers torch
 pip install langchain_anthropic
-pip install langchain_openai
+pip install langchain_openai langchain_google_genai
 pip install -U open-webui
 pip install -U crawl4ai
 pip install -U aider-chat
@@ -23,7 +23,7 @@ WOLFRAM_ALPHA_APPID=your-wolfram-alpha-app-id
 SERP_API_KEY=your-serp-api-key
 ANTHROPIC_API_KEY=your-anthropic-api-key
 
-python deep_research-v4.py
+python deep_research-v5.py
 ```
 ![image](https://github.com/user-attachments/assets/b498321c-1730-4e7b-99e6-4dc11f48c47d)
 

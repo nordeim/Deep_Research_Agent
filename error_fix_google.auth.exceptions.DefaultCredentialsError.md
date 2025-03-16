@@ -184,6 +184,35 @@ google.auth.exceptions.DefaultCredentialsError: Your default credentials were no
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+  File "/cdrom/venv/mychat/DeepResearch/deep_research-v4.py", line 105, in __init__
+    self.llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-thinking-exp-01-21")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cdrom/venv/mychat/lib/python3.12/site-packages/langchain_core/load/serializable.py", line 125, in __init__
+    super().__init__(*args, **kwargs)
+  File "/cdrom/venv/mychat/lib/python3.12/site-packages/pydantic/main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cdrom/venv/mychat/lib/python3.12/site-packages/langchain_google_genai/chat_models.py", line 856, in validate_environment
+    self.client = genaix.build_generative_service(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cdrom/venv/mychat/lib/python3.12/site-packages/langchain_google_genai/_genai_extension.py", line 276, in build_generative_service
+    return v1betaGenerativeServiceClient(**config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cdrom/venv/mychat/lib/python3.12/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 696, in __init__
+    self._transport = transport_init(
+                      ^^^^^^^^^^^^^^^
+  File "/cdrom/venv/mychat/lib/python3.12/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/transports/grpc.py", line 235, in __init__
+    super().__init__(
+  File "/cdrom/venv/mychat/lib/python3.12/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/transports/base.py", line 100, in __init__
+    credentials, _ = google.auth.default(
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/cdrom/venv/mychat/lib/python3.12/site-packages/google/auth/_default.py", line 719, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
   File "/cdrom/venv/mychat/lib/python3.12/site-packages/gradio/queueing.py", line 625, in process_events
     response = await route_utils.call_process_api(
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -214,7 +243,6 @@ Traceback (most recent call last):
   File "/cdrom/venv/mychat/DeepResearch/deep_research-v4.py", line 107, in __init__
     raise ValueError(f"Error initializing ChatGoogleGenerativeAI: {str(e)}")
 ValueError: Error initializing ChatGoogleGenerativeAI: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
-^CKeyboard interruption in main thread... closing server.
 
 < from langchain_openai import ChatOpenAI
 < from langchain_google_genai import ChatGoogleGenerativeAI
@@ -231,7 +259,7 @@ ValueError: Error initializing ChatGoogleGenerativeAI: Your default credentials 
 <                 raise ValueError(f"Error initializing ChatOpenAI: {str(e)}")
 <         elif llm_provider == "google":
 <             try:
-<                 self.llm = ChatGoogleGenerativeAI(model="gemini-pro")
+<                 self.llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-thinking-exp-01-21")
 <             except Exception as e:
 <                 raise ValueError(f"Error initializing ChatGoogleGenerativeAI: {str(e)}")
 <         else:

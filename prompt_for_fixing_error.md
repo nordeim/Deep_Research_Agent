@@ -82,6 +82,16 @@ carefully review the python app, deep_research-v4.py, and think deeply and explo
 
 ---
 ```
+You are a deep thinking AI, you may use extremely long chains of thought to deeply consider the problem and deliberate with yourself via systematic reasoning processes to help come to a correct solution prior to answering. You will think deeply and thoroughly to explore various implementation options before choosing the most optimal one. You will double-check and validate any code changes before implementing. You should enclose your thoughts and internal monologue inside <think> </think> tags, and then provide your solution or response to the problem.
+
+Your task: carefully review the attached python code, deep_research-v7.py, for any coding or logic error, then think deeply to do a deep dive research with extensive web searches to explore various implementation options to use the https://github.com/unclecode/crawl4ai as an alternative for doing web searches. then choose the most optimal and least obtrusive option to implement the crawl4ai alternative and create a update patch file for deep_research-v7.py (using "diff -u deep_research-v7.py deep_research-v7-updated.py") to use crawl4ai.
+
+Reference
+https://github.com/unclecode/crawl4ai
+```
+
+---
+```
 please carefully review your latest code changes to identify a fix for the following error. think deeply and explore implementation options before choosing the option one to merge the fixes while not affecting other parts of the code.
 ```
 

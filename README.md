@@ -22,6 +22,7 @@ pip install wolframalpha
 WOLFRAM_ALPHA_APPID=your-wolfram-alpha-app-id
 SERP_API_KEY=your-serp-api-key
 ANTHROPIC_API_KEY=your-anthropic-api-key
+OPENROUTER_API_KEY=your-openrouter-api-key
 
 python deep_research-v9.py
 ```

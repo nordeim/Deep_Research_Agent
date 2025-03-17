@@ -1,9 +1,7 @@
-
-
-To review the attached Python code (`deep_research-v7.py`) for any coding or logic errors and to explore using `crawl4ai` as an alternative for web searches, let's break down the process:
+Approach: carefully review the attached Python code (`deep_research-v7.py`) for any coding or logic errors and to explore using `crawl4ai` as an alternative for web searches, follow the following process:
 
 1. **Code Review**:
-   - The code seems well-structured, using various tools from `langchain_community` for different types of searches.
+   - The code uses various tools from `langchain_community` for different types of searches.
    - It handles errors and exceptions properly, ensuring robustness.
    - However, there's a warning about `BraveSearchRun` not being available, which suggests an issue with the installation or configuration of `langchain-community`.
 
@@ -13,7 +11,7 @@ To review the attached Python code (`deep_research-v7.py`) for any coding or log
 
 3. **crawl4ai Integration**:
    - `crawl4ai` is a Python library designed for web scraping and crawling, which can be used as an alternative to traditional search tools.
-   - To integrate it, we would need to replace or complement existing search tools like `DuckDuckGoSearchRun` with a custom implementation using `crawl4ai`.
+   - To integrate it, you will need to complement existing search tools like `DuckDuckGoSearchRun` with a custom implementation using `crawl4ai`.
 
 4. **Implementation Options**:
    - **Option 1**: Replace `DuckDuckGoSearchRun` entirely with a `crawl4ai`-based tool. This would involve creating a new class that uses `crawl4ai` to fetch web pages and extract relevant information.

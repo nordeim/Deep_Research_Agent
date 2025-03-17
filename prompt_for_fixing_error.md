@@ -107,6 +107,13 @@ https://github.com/unclecode/crawl4ai
 
 ---
 ```
+You are a deep-thinking AI, you may use extremely long chains of thought to deeply consider the problem and deliberate with yourself via systematic reasoning processes to help come to a correct solution before answering. You will think deeply and thoroughly to explore various implementation options before choosing the most optimal one. You will double-check and validate any code changes before implementing. You should enclose your thoughts and internal monologue inside <think> </think> tags, and then provide your solution or response to the problem.
+
+Your task: think deeply and explore with extensive web searches, prioritizing on GitHub website, to find a LangChain type of tool-based agent similar to https://python.langchain.com/docs/integrations/providers/openai/ that I can use (import) in a simple python-based LLM chat app that can talk to most OpenAI compatible API providers like OpenRouter (https://openrouter.ai/docs/quickstart). Also create a sample python code that uses such a library and one that can accept input parameters like System and User prompts, base_url, api_key, temperature, max_tokens.
+```
+
+---
+```
 please carefully review your latest code changes to identify a fix for the following error. think deeply and explore implementation options before choosing the option one to merge the fixes while not affecting other parts of the code.
 ```
 

@@ -28,6 +28,25 @@ python deep_research-v9.py
 ![image](https://github.com/user-attachments/assets/d6027452-8b0b-478c-836d-70b6152e4888)
 
 ```
+$ diff -u deep_research-v9.py gemini-v9.py
+--- deep_research-v9.py 2025-03-17 14:18:22.043906875 +0800
++++ gemini-v9.py  2025-03-17 20:30:13.348147453 +0800
+@@ -136,9 +136,9 @@
+                 raise ValueError("OPENROUTER_API_KEY environment variable is not set. Please add it to your .env file.")
+             try:
+                 self.llm = ChatOpenAI(
+-                    model_name="openai/gpt-4",  # Default to GPT-4 through OpenRouter
+-                    openai_api_key=self.openrouter_api_key,
+-                    openai_api_base="https://openrouter.ai/api/v1",
++                    model_name="gemini-2.0-pro-exp-02-05",  # Default to GPT-4 through OpenRouter
++                    openai_api_key="your-gemini-api-key",
++                    openai_api_base="https://generativelanguage.googleapis.com/v1beta/openai/",
+                     max_tokens=8192
+                 )
+             except Exception as e:
+```
+
+```
 $ python deep_research-v9.py
 WARNING:root:BraveSearchRun is not available. Ensure langchain-community is installed with Brave Search support.
 Warning: BraveSearchRun is not available. Ensure langchain-community is installed with Brave Search support.

@@ -59,7 +59,6 @@ Warning: BraveSearchRun is not available. Ensure langchain-community is installe
 
 > Entering new AgentExecutor chain...
 
-```json
 {
   "topic": "OpenAI Agents SDK",
   "summary": "The research aimed to gather information about the OpenAI Agents SDK. Initial web searches and Wikipedia lookups did not yield specific results for an \"OpenAI Agents SDK.\" Further investigation suggests that there is no officially recognized SDK with this exact name. However, OpenAI offers various APIs and libraries that facilitate agent development, such as the OpenAI API (including Assistants API) and libraries like LangChain which interact with OpenAI models. The findings suggest that while a dedicated \"Agents SDK\" doesn't exist, the broader ecosystem provides ample tools for building AI agents using OpenAI's technologies.",
@@ -170,11 +169,11 @@ Warning: BraveSearchRun is not available. Ensure langchain-community is installe
   "research_question": "What is the OpenAI Agents SDK and what are its capabilities?",
     "methodology": "Tool-based Agent with Multi-Source Verification"
 }
-```
 
 > Finished chain.
 ```
 
+---
 ### **1. Core Enhancements**
 - **Error Handling & Validation**:
   - Stricter API key validation with descriptive error messages.

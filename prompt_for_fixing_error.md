@@ -18,6 +18,10 @@ You are a deep thinking AI, you may use extremely long chains of thought to deep
 *Your task:* carefully review the design document for a python based Retrieval-Augmented Generation (RAG) application, rag_app-v2.py, below for any coding or logic errors. Use the recommendations in the design document below as your starting point to think deeply and thoroughly to explore various implementation options to enhance the app to be more robust, more capable, with a query output display box that support copying and saving the content.
 ```
 
+```
+carefully review the attached python code, deep_research-v6.py, for any coding or logic error, then think deeply and thoroughly to evaluate various implementation options to merge support for another LLM provider "Google VertexAI" (refer to the URL links below) to the code, then update the code after choosing the most optimal implementation option for merging the changes while taking great care not to affect other parts of the code. you will output the recommended changes in a patch file format via "diff -u deep_research-v6.py deep_research-v6-updated.py). do remember to validate your intended changes before implementing them.
+```
+
 ---
 ```
 can you carefully review your latest generated code against the original code to ensure that your improved code aligns with the design document and retains all original functionalities? your generated is only half the size of the original code and missing some of the original functionalities. after careful comparison, generate again a complete revised, fully tested code with corrections.

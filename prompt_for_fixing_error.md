@@ -22,6 +22,21 @@ You are a deep thinking AI, you may use extremely long chains of thought to deep
 carefully review the attached python code, deep_research-v6.py, for any coding or logic error, then think deeply and thoroughly to evaluate various implementation options to merge support for another LLM provider "Google VertexAI" (refer to the URL links below) to the code, then update the code after choosing the most optimal implementation option for merging the changes while taking great care not to affect other parts of the code. you will output the recommended changes in a patch file format via "diff -u deep_research-v6.py deep_research-v6-updated.py). do remember to validate your intended changes before implementing them.
 ```
 
+```
+*Your task:* carefully review the attached python code, deep_research-v6.py, for any coding or logic error, then think deeply and thoroughly to evaluate various implementation options to merge the suggested improvements in the attached sample_update_v6.md and sample_update2_v6.md files to the code, then update the code after choosing the most optimal implementation option for merging the changes while taking great care not to affect other parts of the code. remember to validate your intended changes before implementing them.
+```
+
+---
+```
+You are a deep thinking AI, you may use extremely long chains of thought to deeply consider the problem and deliberate with yourself via systematic reasoning processes to help come to a correct solution prior to answering. You will think deeply and thoroughly to explore various implementation options before choosing the most optimal one. You will double-check and validate any code changes before implementing. You should enclose your thoughts and internal monologue inside <think> </think> tags, and then provide your solution or response to the problem.
+ 
+*Your task:* carefully review the attached python code, deep_research-v3.py, for any coding or logic error, then think deeply and thoroughly to evaluate various implementation options to merge the fix for the following error to the code, then update the code after choosing the most optimal implementation option for merging the changes while taking great care not to affect other parts of the code. remember to validate your intended changes before implementing them.
+```
+
+```
+Carefully review the python app, deep_research-v4.py, and think deeply and explore thoroughly various implementation options to add a "Settings" tab to the Gradio web UI to let user to select different LLM API providers before choosing the most optimal and least intrusive implementation option to update deep_research-v4.py and create a patch file ("diff -u deep_research-v4.py deep_research-v4-updated.py") to effect the change. double-check and validate that the updated code is complete and fully tested working and that the suggested fix has been merged without affecting other parts of the code. use line by line comparison of the two codes for your verification and validation/confirmation.
+```
+
 ---
 ```
 can you carefully review your latest generated code against the original code to ensure that your improved code aligns with the design document and retains all original functionalities? your generated is only half the size of the original code and missing some of the original functionalities. after careful comparison, generate again a complete revised, fully tested code with corrections.
